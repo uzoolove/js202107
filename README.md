@@ -49,7 +49,7 @@
 5. 크롬 브라우저 주소창에 http://localhost 입력
 6. F12 눌러서 크롬 브라우저의 개발자 도구 표시
 7. 각 예제 실행 결과를 개발자 도구의 Console 탭에서 확인
-
+<!--
 ## PPT 다운로드
 * [Download Pages](https://github.com/uzoolove/js202107/blob/main/PPT)(마우스 오른쪽 버튼 > 새 탭에서 링크 열기) 이동 후 각 PPT 파일 선택해서 Download 버튼 클릭
 
@@ -62,7 +62,7 @@
 ## 실습 결과 확인
 * [실습 페이지로 이동](https://uzoolove.github.io/js202107/)(마우스 오른쪽 버튼 > 새 탭에서 링크 열기)
 
-<!--
+
 # 2일차
 ## 소스코드 다운로드
 * day2.zip
