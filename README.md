@@ -17,8 +17,7 @@
     * Detect Indentation: 체크 해제
 
 ### 소스코드 다운로드
-* day1.zip
-* [Download Pages](https://github.com/uzoolove/js202107/blob/master/sample)(마우스 오른쪽 버튼 > 새 탭에서 링크 열기) 이동 후 day1.zip 선택해서 Download 버튼 클릭
+* sample/day1.zip 다운로드
 * 다운로드 받은 파일을 C 드라이브 jslab 폴더 생성 후 압축 해제
   * C:\jslab\ch03
   * C:\jslab\css
@@ -51,7 +50,7 @@
 7. 각 예제 실행 결과를 개발자 도구의 Console 탭에서 확인
 <!--
 ## PPT 다운로드
-* [Download Pages](https://github.com/uzoolove/js202107/blob/main/PPT)(마우스 오른쪽 버튼 > 새 탭에서 링크 열기) 이동 후 각 PPT 파일 선택해서 Download 버튼 클릭
+* PPT 폴더 이동 후 각 PPT 파일 선택해서 Download 버튼 클릭
 
 ## 소스코드 공유(본인의 소스코드를 강사에게 공유하고 싶을때)
 1. [Code Share](https://codeshare.io/) 접속(마우스 오른쪽 버튼 > 새 탭에서 링크 열기)
