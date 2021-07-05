@@ -1,3 +1,4 @@
+// TODO: hoisting 단원. 변수 중복 선언
 var arr = ['zero', 'one', 'two'];
 var arr = ['zero', 'one', 'two', 'three', 'four'];
 console.log(arr.length);
