@@ -1,4 +1,13 @@
+var kor = 100;
+var eng = 90;
+var math = 58;
+var sum = kor + eng + math;
+var avg = sum / 3;
 
+console.log('총점: ' + sum);
+console.log('평균: ' + Math.round(avg));
+console.log('최고점: ' + Math.max(kor, eng, math));
+console.log('최저점: ' + Math.min(kor, eng, math));
 
 
 
