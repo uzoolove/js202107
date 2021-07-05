@@ -20,7 +20,7 @@ if(kor>=60 && eng>=60 && math>=60 && avg>=70){
 // 평균값으로 학점(A-90이상, B-80이상, C-70이상, D-60이상, F-60미만)을 출력하시오.(switch)
 switch(Math.floor(avg/10)){
   case 10:
-  case 9:
+  case 9: 
     console.log('A');
     break;
   case 8:
