@@ -13,9 +13,10 @@
       // TODO: DOM 단원에서 자세히 확인
       var btn = document.querySelector('button');
       btn.onclick = function(event){
-        if(event == undefined){ // ~IE8
-          event = window.event;
-        }
+        // if(event == undefined){ // ~IE8
+        //   event = window.event;
+        // }
+        event = event || window.event;
         console.log('버튼 클릭.', event.clientX);
       };
     };
