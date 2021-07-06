@@ -6,10 +6,43 @@ function printArr(arr){
 }
 
 var colorArr = ['orange', 'yellow', 'green'];
+colorArr.push('black');
+colorArr.push('white');
+console.log(colorArr.shift());
+console.log(colorArr.pop());
 printArr(colorArr);
 
 // 유사배열객체
+//  - length 속성 추가
+//  - 0부터 시작해서 1씩 증가하는 속성 추가
 var colorObj = {
-  
+  0: "orange",
+  1: "yellow",
+  2: "green",
+  length: 3,
+  push: function(elem){
+    // 마지막 인덱스에 지정한 elem를 추가한다.
+    colorObj[colorObj.length] = elem;
+    colorObj.length++;
+  },
+  pop: function(){
+    // 마지막 요소 추출후 반환
+    var last = colorObj[colorObj.length-1];
+    colorObj.length--;
+    delete colorObj[colorObj.length];
+    return last;
+  },
+  shift: function(){
+    // 첫번째 요소 추출후 반환
+    var first = arr[0];
+    for(var i=0; i<arr.length-1; i++){
+      arr[i] = arr[i+1];
+    }
+    arr.length--;
+  }
 };
+colorObj.push('black');
+colorObj.push('white');
+console.log(colorObj.shift());
+console.log(colorObj.pop());
 printArr(colorObj);
