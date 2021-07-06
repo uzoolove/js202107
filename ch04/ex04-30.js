@@ -1,5 +1,10 @@
 var Score = function(kor, eng, math){
-	
+	this.sum = function(){
+    
+  };
+  this.avg = function(){
+
+  };
 };
 
 // kim은 점수가 각각 100, 90, 80이다.
