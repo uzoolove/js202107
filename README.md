@@ -61,7 +61,7 @@
 ## 실습 결과 확인
 * [실습 페이지로 이동](https://uzoolove.github.io/js202107/)(마우스 오른쪽 버튼 > 새 탭에서 링크 열기)
 
-<!--
+
 # 2일차
 ## 소스코드 다운로드
 * sample/day2.zip 다운로드
@@ -70,6 +70,7 @@
   * C:\jslab\etc
   * C:\jslab\index.html
 
+<!--
 # 3일차
 ## 소스코드 다운로드
 * sample/day3.zip 다운로드
