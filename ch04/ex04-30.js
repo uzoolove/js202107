@@ -3,7 +3,7 @@ var Score = function(kor, eng, math){
     
   };
   this.avg = function(){
-
+    
   };
 };
 
