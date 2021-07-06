@@ -19,28 +19,30 @@ var lee = {
   getName: returnName
 };
 
-// 객체를 생성해서 반환하는 함수
+// 객체를 생성해서 반환하는 함수(생성자)
 function Person(name, age){
-  var obj = {};
+  // var obj = {};
 
-  obj.name = name;
-  obj.age = age;
-  obj.getName = function(){
+  if(!(this instanceof Person)){
+    return new Person(name, age);
+  }
+
+  this.name = name;
+  this.age = age;
+  this.getName = function(){
     return this.name;
   };
 
-  return obj;
+  // return obj;
 }
 
-var kim = Person('김철수', 30);
-var lee = Person('이영희', 35);
+var kim = new Person('김철수', 30);
+var lee = new Person('이영희', 35);
 var hong = Person('홍길동', 40);
-
-
-
 
 console.log(kim.age, kim.getName());
 console.log(lee.age, lee.getName());
+console.log(hong.age, hong.getName());
 
 console.log(kim.getName(), kim.getName.call(window));
 console.log(lee.getName(), lee.getName.apply(kim));
