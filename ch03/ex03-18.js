@@ -34,11 +34,13 @@ var colorObj = {
   },
   shift: function(){
     // 첫번째 요소 추출후 반환
-    var first = arr[0];
-    for(var i=0; i<arr.length-1; i++){
-      arr[i] = arr[i+1];
+    var first = colorObj[0];
+    for(var i=0; i<colorObj.length-1; i++){
+      colorObj[i] = colorObj[i+1];
     }
-    arr.length--;
+    colorObj.length--;
+    delete colorObj[colorObj.length];
+    return first;
   }
 };
 colorObj.push('black');
