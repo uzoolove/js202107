@@ -15,9 +15,13 @@
     btn1.onclick = function(){
       var movies = document.querySelector('#movies');
       var firstLi = movies.firstElementChild;
-      var secondLi = firstLi.nextElementSibling;
-      var title = secondLi.firstChild.nodeValue;
-      console.log(title);
+      if(firstLi){
+        var secondLi = firstLi.nextElementSibling;
+        if(secondLi){
+          var title = secondLi.firstChild.nodeValue;
+          console.log(title);
+        }
+      }
     };
     // DOM Level 0 방식(비표준)
     btn2.onclick = function(){
@@ -32,7 +36,10 @@
       var list = document.querySelectorAll('.list');
       for(var i=0; i<list.length; i++){
         var firstLi = list[i].firstElementChild;
-        firstLi.parentNode.removeChild(firstLi);
+        if(firstLi){
+          // firstLi.remove(); // DOM Level 4에 추가됨(IE 지원안함)
+          firstLi.parentNode.removeChild(firstLi);
+        }
       }
     });
   });
