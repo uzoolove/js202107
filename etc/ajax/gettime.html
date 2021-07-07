@@ -21,12 +21,14 @@
 		// 1. XMLHttpRequest 생성		
 		var xhr = new XMLHttpRequest();
 		// 2. 요청준비(open())
-		xhr.open('get', '/time?msg=time', false);
+		xhr.open('get', '/time?msg=time', true);
+    xhr.onload = function(){
+      // 4. 응답 데이터 처리
+      var result = xhr.responseText;
+      append(result);
+    };
 		// 3. 요청(send())
     xhr.send();
-		// 4. 응답 데이터 처리
-		var result = xhr.responseText;
-    append(result);
 	};
 
 	// 2. XMLHttpRequest를 이용한 Ajax 요청(/timejson)
