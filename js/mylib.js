@@ -1,6 +1,8 @@
+var MyLib = {};
+
 // 서버에 ajax 요청을 보낸다.
 // var ajax = function(url, method, async, data, dataType, success){
-var ajax = function(url, options={}){
+MyLib.ajax = function(url, options={}){
   // options = options || {};
   options.method = options.method || 'get';
   if(options.async == undefined){
