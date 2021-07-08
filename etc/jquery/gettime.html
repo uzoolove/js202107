@@ -6,9 +6,41 @@
 <link rel="shortcut icon" href="../../img/favicon.ico">
 <script src="../../js/mylib.js"></script>
 <script src="../../js/jquery-1.12.4.js"></script>
+
 <script>
+	$(function(){
+    $('button').on('click', async function(){
+      // ECMA 2017 async/await
+      await $.ajax('/time', {
+        data: 'msg=ajax-1',
+        success: append
+      });
+      await $.ajax('/timejson', {
+        data: 'msg=ajax-2',
+        success: appendJson,
+        method: 'post', // 기본 get
+        async: false,   // 기본 true
+        // dataType: 'json'  // 생략시 알아서 판단
+      });
+      await $.ajax('/time?msg=ajax-3');
+      await $.ajax('/time?msg=ajax-4', {
+        success: append
+      });
+
+      await $.get('/time', 'msg=get-1', append);
+      await $.get('/time', 'msg=get-2');
+      await $.get('/time?msg=get-3', append);
+      await $.get('/time?msg=get-4');
+
+      await $.getJSON('/timejson', 'msg=getjson', appendJson);
+
+      await $.post('/time', 'msg=post', append);
+    });
+  });
 	
-	
+
+
+
 	function append(str){
 		document.querySelector('#result').innerHTML += str + '<br>';
 	}

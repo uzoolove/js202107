@@ -1,8 +1,22 @@
 var MyLib = {};
 
-MyLib.getJSON = function(){};
+// Ajax 요청으로 get 방식의 json 데이터를 받아온다.
+MyLib.getJSON = function(url, data, success){
+  MyLib.get(url, data, success, 'json');
+};
 
-MyLib.get = function(){};
+// Ajax 요청으로 get 방식의 text 데이터를 받아온다.
+MyLib.get = function(url, data, success, dataType){
+  var options = {dataType: dataType};
+  if(typeof data == 'string'){
+    options.data = data;
+    options.success = success;
+  }else{
+    options.success = data;
+  }
+
+  MyLib.ajax(url, options);
+};
 
 // 서버에 ajax 요청을 보낸다.
 // var ajax = function(url, method, async, data, dataType, success){
