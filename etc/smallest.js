@@ -11,9 +11,9 @@ function smallest(nums){
   //   }
   // }
   // return min;
-  return Math.min.apply(this, nums);
+  // return Math.min.apply(this, nums);
   // TODO: prototype 단원. min()은 prototype.js 라이브러리에서 추가한 배열 메소드
-  // return nums.min();
+  return nums.min();
 }
 
 console.log(smallest([10,100]));	// 10
