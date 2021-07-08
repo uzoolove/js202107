@@ -1,5 +1,20 @@
 var MyLib = {};
 
+// 배열의 최소값을 반환한다.
+// var a = new Array(20, 10, 30);
+// a.min()
+Array.prototype.min = function(){
+  return Math.min.apply(Math, this);
+};
+
+// firstLi.remove()
+// -> firstLi.parentNode.removeChild(firstLi)
+if(!HTMLElement.prototype.remove){
+  HTMLElement.prototype.remove = function(){
+    this.parentNode.removeChild(this);
+  };
+}
+
 // Ajax 요청으로 get 방식의 json 데이터를 받아온다.
 MyLib.getJSON = function(url, data, success){
   MyLib.get(url, data, success, 'json');
@@ -20,8 +35,8 @@ MyLib.get = function(url, data, success, dataType){
 
 // 서버에 ajax 요청을 보낸다.
 // var ajax = function(url, method, async, data, dataType, success){
-MyLib.ajax = function(url, options={}){
-  // options = options || {};
+MyLib.ajax = function(url, options){
+  options = options || {};
   options.method = options.method || 'get';
   if(options.async == undefined){
     options.async = true;
