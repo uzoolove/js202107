@@ -1,6 +1,14 @@
 // 지정한 수가 소수인지 여부를 반환
 var isPrime = function(num){
-	
+  // 소수 판별 코드
+	var prime = true;
+  for(var i=2; i<num/2; i++){
+    if(num%i == 0){
+      prime = false;
+      break;
+    }
+  }
+  return prime;
 };
 
 console.time('소요시간');
