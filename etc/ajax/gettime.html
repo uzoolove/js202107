@@ -10,8 +10,8 @@
 <script>
 	window.onload = function(){
 		document.querySelector('button').onclick = function(){
-      getTimeXHR();
-      getTimeJson();
+      // getTimeXHR();
+      // getTimeJson();
       getTime();
     };
 	};
@@ -49,6 +49,8 @@
 
 	// 3. mylib.js의 ajax(url, method, async, data, dataType, success) 함수를 이용한 Ajax 요청
 	function getTime(){
+    ajax('/time', 'GET', true, 'msg=ajax-1', 'text', append);
+    ajax('/timejson', 'post', false, 'msg=ajax-2', 'JSON', appendJson);
     
   }
 
