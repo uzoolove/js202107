@@ -2,9 +2,11 @@ var MyLib = {};
 
 // Child가 Parent를 상속 받는다.
 MyLib.inherite = function(Parent, Child){
-  var F = function(){};
-  F.prototype = Parent.prototype;
-  Child.prototype = new F();
+  // var F = function(){};
+  // F.prototype = Parent.prototype;
+  // Child.prototype = new F();
+
+  Child.prototype = Object.create(Parent.prototype);
   Child.prototype.constructor = Child;
 };
 
