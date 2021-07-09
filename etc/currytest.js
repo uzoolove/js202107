@@ -36,6 +36,9 @@ var minUnder100 = function(){
   return fn.apply(this, args);
 };
 
+var maxAbove10 = Math.max.mycurry(10);
+var minUnder100 = Math.min.mycurry(100);
+
 console.log(maxAbove10(1000, 500, 300, 400));// 1000
 console.log(maxAbove10(1, 6, 7, 3, 6, 4, 2));// 10
 
