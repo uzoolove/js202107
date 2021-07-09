@@ -12,7 +12,11 @@ console.log(Math.min(1, 6, 7, 3, 6, 4, 2)); // 1
 */
 var maxAbove10 = function(){
   // etc/smallest.js 참조
-  
+  var max = Math.max.apply(this, arguments);
+  if(max < 10){
+    max = 10;
+  }
+  return max;
 };
 
 /*
@@ -22,7 +26,14 @@ var maxAbove10 = function(){
 즉, 최대 100 이하의 결과가 나와야 한다.
 */
 var minUnder100 = function(){
-	
+	var fn = Math.min;
+  var preArgs = [100];
+  // [1000, 500, 300, 400]
+  var callArgs = Array.prototype.slice.call(arguments);
+  // [100, 1000, 500, 300, 400]
+  var args = preArgs.concat(callArgs);
+  // Math.min(100, 1000, 500, 300, 400)
+  return fn.apply(this, args);
 };
 
 console.log(maxAbove10(1000, 500, 300, 400));// 1000
