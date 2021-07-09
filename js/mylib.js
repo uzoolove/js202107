@@ -1,5 +1,17 @@
 var MyLib = {};
 
+// 메모이제이션(캐싱) 기능의 함수(래퍼)
+// isPrime(3) -> 캐시 X
+// isPrime = isPrime.memoize();
+// isPrime(3) -> 캐시 O
+//  -> isPrime.memoization(3);
+Function.prototype.memoize = function(){
+  var fn = this;  // isPrime
+  return function(){
+    return fn.memoization.apply(fn, arguments);
+  };
+};
+
 // 메모이제이션(캐싱) 기능의 함수
 // isPrime(3) -> 캐시 X
 // isPrime.memoization(1000000007)  -> 캐시 O
