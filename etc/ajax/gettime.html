@@ -10,12 +10,12 @@
 <script>
 	window.onload = function(){
 		document.querySelector('button').onclick = function(){
-      // getTimeXHR();
+      getTimeXHR();
       // getTimeJson();
-      getTime();
+      // getTime();
     };
 	};
-
+  
 	// 1. XMLHttpRequest를 이용한 Ajax 요청(/time)
 	function getTimeXHR(){
 		// 1. XMLHttpRequest 생성		
@@ -24,7 +24,7 @@
 		xhr.open('get', '/time?msg=time', true);
     xhr.onload = function(){
       // 4. 응답 데이터 처리
-      var result = xhr.responseText;
+      var result = this.responseText;
       append(result);
     };
 		// 3. 요청(send())
