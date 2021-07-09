@@ -25,5 +25,4 @@ arr.forEach((elem) => {
 
 var arr2 = arr.map(elem=>elem*elem);
 
-
 console.log(arr2);
